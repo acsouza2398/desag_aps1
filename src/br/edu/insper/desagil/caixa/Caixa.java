@@ -32,13 +32,10 @@ public class Caixa {
     public double valorTotal(Carrinho carrinho) {
     	double valorFinal = 0;
     	
-    	// Lista de pedidos no carrinho
-    	List<Pedido> lPedidos = carrinho.getPedidos();
-    	
     	// Para cada um dos pedidos no carrinho
-    	for (Pedido pedido: lPedidos) {
-    		int codProduto = produto.getCodigo(); // Código do produto do pedido
-    		double valorPedido = pedido.getTotal(); // Valor do pedido
+    	for (Pedido ped : carrinho.getPedidos()) {
+    		int codProduto = ped.getProduto().getCodigo(); // Código do produto do pedido
+    		double valorPedido = ped.getTotal(); // Valor do pedido
     		
     		int desconto = 0;
     		// Se o código do produto estiver no dicDescontos

@@ -22,15 +22,11 @@ public class Pedido {
 	}
 	
 	public double getTotal() {
-		return this.total = setTotal(produto, pedido);
+		return this.produto.getPreco() * this.getQuantidade();
 	}
 	
 	private int Quantidade(Pedido pedido) {
 		return pedido.quantidade ++;
-	}
-	
-	private double setTotal(Produto produto, Pedido pedido) {
-		return pedido.total = produto.getPreco() * pedido.getQuantidade();
 	}
 }
 

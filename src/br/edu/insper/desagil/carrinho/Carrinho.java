@@ -19,15 +19,12 @@ public class Carrinho {
 	}
 	
 	public void getProduto(Produto produto) {
-		List<Pedido> l = getPedidos(); // Pega a lista com todos os pedidos no carrinho
 		boolean noCarrinho = false;
 		
 		// Para cada pedido no carrinho
-		for (int i = 0; i < l.size(); i++) {
-		    Pedido ped = l.get(i); // Pedido do carrinho
-		    Produto prod = ped.getProduto(); // Produto do pedido no carrinho  
+		for (Pedido ped : this.pedidos) {
 		    // Se o produto recebido for um dos produtos no carrinho
-		    if (prod == produto) {
+		    if (ped.getProduto().getNome() == produto.getNome()) {
 		    	ped.getQuantidade(); // Incrementa quantidade desse produto no pedido dele
 		    	noCarrinho = true;
 		    }

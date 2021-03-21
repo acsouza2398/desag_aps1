@@ -28,7 +28,7 @@ public class Carrinho {
 		    Produto prod = ped.getProduto(); // Produto do pedido no carrinho  
 		    // Se o produto recebido já for um dos produtos no carrinho
 		    if (prod == produto) {
-		    	ped.incrementaQuantidade(); // Incrementa quantidade desse produto no pedido dele
+		    	ped.getQuantidade(); // Incrementa quantidade desse produto no pedido dele
 		    	noCarrinho = true;
 		    }
 		}
@@ -36,7 +36,7 @@ public class Carrinho {
 		// Se o produto não estiver no carrinho
 		if (noCarrinho == false) {
 			// Constroi um pedido
-			Pedido pedido = new Pedido(produto);
+			Pedido pedido = new Pedido(produto, 1, 1);
 			
 			// Insere o pedido no carrinho
 			this.pedidos.add(pedido);

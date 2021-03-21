@@ -18,7 +18,7 @@ public class Carrinho {
 		return pedidos;
 	}
 	
-	public void recebeProduto(Produto produto) {
+	public void getProduto(Produto produto) {
 		List<Pedido> l = getPedidos(); // Pega a lista com todos os pedidos no carrinho
 		boolean noCarrinho = false;
 		
@@ -26,17 +26,17 @@ public class Carrinho {
 		for (int i = 0; i < l.size(); i++) {
 		    Pedido ped = l.get(i); // Pedido do carrinho
 		    Produto prod = ped.getProduto(); // Produto do pedido no carrinho  
-		    // Se o produto recebido já for um dos produtos no carrinho
+		    // Se o produto recebido for um dos produtos no carrinho
 		    if (prod == produto) {
 		    	ped.getQuantidade(); // Incrementa quantidade desse produto no pedido dele
 		    	noCarrinho = true;
 		    }
 		}
 		
-		// Se o produto não estiver no carrinho
+		// Se o produto nao estiver no carrinho
 		if (noCarrinho == false) {
 			// Constroi um pedido
-			Pedido pedido = new Pedido(produto, 1, 1);
+			Pedido pedido = new Pedido(produto,1);
 			
 			// Insere o pedido no carrinho
 			this.pedidos.add(pedido);

@@ -6,10 +6,9 @@ public class Pedido {
 	private int quantidade;
 	private double total;
 	
-	public Pedido(Produto produto, int quantidade, int total) {
+	public Pedido(Produto produto, int quantidade) {
 			this.produto = produto;
 			this.quantidade = quantidade;
-			this.total = total;
 	}
 	
 	private Pedido pedido;

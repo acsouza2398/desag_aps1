@@ -7,13 +7,24 @@ import br.edu.insper.desagil.carrinho.Carrinho;
 public class Testador {
 	Produto skol = new Produto(1, "skol", 2.50);
 	Produto kirin = new Produto(2, "kirin", 4);
+	double t;
 	
 	public boolean testeA() {
+		
 	    return false;
 	}
 
 	public boolean testeB() {
-	    return false;
+		Carrinho carrinhoB = new Carrinho();
+		carrinhoB.getProduto(skol);
+		Caixa caixaB = new Caixa();
+		t = caixaB.valorTotal(carrinhoB);
+		if(t == 2.5) {
+			return true;
+		}
+		else {
+	    	return false;
+		}
 	}
 
 	public boolean testeC() {

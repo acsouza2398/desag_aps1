@@ -18,15 +18,12 @@ public class Pedido {
 	}
 	
 	public int getQuantidade() {
-        return this.quantidade = Quantidade(pedido);   
+        return this.quantidade += 1;   
 	}
 	
 	public double getTotal() {
-		return this.produto.getPreco() * this.getQuantidade();
+		return this.produto.getPreco() * this.quantidade;
 	}
 	
-	private int Quantidade(Pedido pedido) {
-		return pedido.quantidade ++;
-	}
 }
 

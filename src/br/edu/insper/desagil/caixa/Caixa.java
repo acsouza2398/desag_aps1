@@ -9,8 +9,8 @@ import br.edu.insper.desagil.pedido.Pedido;
 import br.edu.insper.desagil.produto.Produto;
 
 public class Caixa {
-	private Produto produto;
-	private Pedido pedido;
+	//private Produto produto;
+	//private Pedido pedido;
 	
 	// Mapeia código de produtos para inteiros (1 a 99)
     private Map<Integer, Integer> dicDescontos;
@@ -42,10 +42,8 @@ public class Caixa {
     		if (this.dicDescontos.containsKey(codProduto)) {
     			desconto = this.dicDescontos.get(codProduto); // pega o valor do desconto 
     		}
-    		
-    		double valorFinalPedido = valorPedido *(1-desconto/100); // Valor do pedido com desconto
+    		double valorFinalPedido = valorPedido *(1-(desconto/100.0)); // Valor do pedido com desconto
     		valorFinal = valorFinal + valorFinalPedido; // Acrescenta o valor ao valor final
-        		
     	}
     	
     	return valorFinal;

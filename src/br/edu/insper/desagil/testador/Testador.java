@@ -39,14 +39,14 @@ public class Testador {
 	}
 
 	public boolean testeC() {
-	    return false;
+		return false;
 	}
 
 	public boolean testeD() {
-	    return false;
+		return false;
 	}
 
 	public boolean testeE() {
-	    return false;
+		return false;
 	}
 }

@@ -39,14 +39,59 @@ public class Testador {
 	}
 
 	public boolean testeC() {
-		return false;
+		resultEsperado = 4 * (0.9);
+		Carrinho carrinhoC = new Carrinho();
+		Produto kirin = new Produto(2, "kirin", 4);
+		carrinhoC.getProduto(kirin);
+		Caixa caixaC = new Caixa();
+		caixaC.Adicionar(kirin, 10);
+		totalCaixa = caixaC.valorTotal(carrinhoC);
+		if(totalCaixa == resultEsperado) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public boolean testeD() {
-		return false;
+		resultEsperado = 8.6;
+		Carrinho carrinhoD = new Carrinho();
+		Produto skol = new Produto(1, "skol", 2.5);
+		Produto kirin = new Produto(2, "kirin", 4);
+		carrinhoD.getProduto(kirin);
+		carrinhoD.getProduto(skol);
+		carrinhoD.getProduto(skol);
+		Caixa caixaD = new Caixa();
+		caixaD.Adicionar(kirin, 10);
+		totalCaixa = caixaD.valorTotal(carrinhoD);
+		
+		if(totalCaixa == resultEsperado) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public boolean testeE() {
-		return false;
+		resultEsperado = 12.2;
+		Carrinho carrinhoE = new Carrinho();
+		Produto skol = new Produto(1, "skol", 2.5);
+		Produto kirin = new Produto(2, "kirin", 4);
+		carrinhoE.getProduto(kirin);
+		carrinhoE.getProduto(kirin);
+		carrinhoE.getProduto(skol);
+		carrinhoE.getProduto(skol);
+		Caixa caixaE = new Caixa();
+		caixaE.Adicionar(kirin, 10);
+		totalCaixa = caixaE.valorTotal(carrinhoE);
+		
+		if(totalCaixa == resultEsperado) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
